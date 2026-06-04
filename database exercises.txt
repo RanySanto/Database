@@ -1,0 +1,203 @@
+1.Prepare a list of offices sorted by country, state, city.
+soluction: 
+SELECT * FROM offices ORDER BY country,state,city
+
+6	Sydney	+61 2 9264 2451	5-11 Wentworth Avenue	Floor #2	NSW	Australia	2010	APAC	...
+4	Paris	+33 14 723 4404	43 Rue Jouffroy D'abbans			France	75017	EMEA	...
+5	Tokyo	+81 33 224 5000	4-1 Kioicho		Chiyoda-Ku	Japan	102-8578	Japan	...
+7	London	+44 20 7877 2041	25 Old Broad Street	Level 7		UK	EC2N 1HN	EMEA	...
+1	San Francisco	+1 650 219 4782	100 Market Street	Suite 300	CA	USA	94080	NA	...
+2	Boston	+1 215 837 0825	1550 Court Place	Suite 102	MA	USA	02107	NA	...
+3	NYC	+1 212 555 3000	523 East 53rd Street	apt. 5A	NY	USA	10022	NA	...
+
+2.How many employees are there in the company?
+soluction: 
+SELECT COUNT(*) FROM employees
+23			
+
+3.What is the total of payments received?
+soluction: 		
+SELECT SUM(amount) FROM payments
+8853839.230000004
+
+4.List the product lines that contain 'Cars'.
+soluction: 
+SELECT * FROM products WHERE productLine LIKE "%Cars%" 
+S10_1949	1952 Alpine Renault 1300	1:10	Classic Metal Creations	Turnable front wheels; steering function; detailed interior; detailed engine; opening hood; opening trunk; opening doors; and detailed chassis.	7305	98.58	214.3	Classic Cars
+S10_4757	1972 Alfa Romeo GTA	1:10	Motor City Art Classics	Features include: Turnable front wheels; steering function; detailed interior; detailed engine; opening hood; opening trunk; opening doors; and detailed chassis.	3252	85.68	136	Classic Cars
+S10_4962	1962 LanciaA Delta 16V	1:10	Second Gear Diecast	Features include: Turnable front wheels; steering function; detailed interior; detailed engine; opening hood; opening trunk; opening doors; and detailed chassis.	6791	103.42	147.74	Classic Cars
+S12_1099	1968 Ford Mustang	1:12	Autoart Studio Design	Hood, doors and trunk all open to reveal highly detailed interior features. Steering wheel actually turns the front wheels. Color dark green.	68	95.34	194.57	Classic Cars
+S12_1108	2001 Ferrari Enzo	1:12	Second Gear Diecast	Turnable front wheels; steering function; detailed interior; detailed engine; opening hood; opening trunk; opening doors; and detailed chassis.	3619	95.59	207.8	Classic Cars
+S12_3148	1969 Corvair Monza	1:18	Welly Diecast Productions	1:18 scale die-cast about 10 inches long doors open, hood opens, trunk opens and wheels roll	6906	89.14	151.08	Classic Cars
+S12_3380	1968 Dodge Charger	1:12	Welly Diecast Productions	1:12 scale model of a 1968 Dodge Charger. Hood, doors and trunk all open to reveal highly detailed interior features. Steering wheel actually turns the front wheels. Color black	9123	75.16	117.44	Classic Cars
+S12_3891	1969 Ford Falcon	1:12	Second Gear Diecast	Turnable front wheels; steering function; detailed interior; detailed engine; opening hood; opening trunk; opening doors; and detailed chassis.	1049	83.05	173.02	Classic Cars
+S12_3990	1970 Plymouth Hemi Cuda	1:12	Studio M Art Models	Very detailed 1970 Plymouth Cuda model in 1:12 scale. The Cuda is generally accepted as one of the fastest original muscle cars from the 1970s. This model is a reproduction of one of the orginal 652 cars built in 1970. Red color.	5663	31.92	79.8	Classic Cars
+S12_4675	1969 Dodge Charger	1:12	Welly Diecast Productions	Detailed model of the 1969 Dodge Charger. This model includes finely detailed interior and exterior features. Painted in red and white.	7323	58.73	115.16	Classic Cars
+S18_1129	1993 Mazda RX-7	1:18	Highway 66 Mini Classics	This model features, opening hood, opening doors, detailed engine, rear spoiler, opening trunk, working steering, tinted windows, baked enamel finish. Color red.	3975	83.51	141.54	Classic Cars
+S18_1342	1937 Lincoln Berline	1:18	Motor City Art Classics	Features opening engine cover, doors, trunk, and fuel filler cap. Color black	8693	60.62	102.74	Vintage Cars
+S18_1367	1936 Mercedes-Benz 500K Special Roadster	1:18	Studio M Art Models	This 1:18 scale replica is constructed of heavy die-cast metal and has all the features of the original: working doors and rumble seat, independent spring suspension, detailed interior, working steering system, and a bifold hood that reveals an engine so...	8635	24.26	53.91	Vintage Cars
+S18_1589	1965 Aston Martin DB5	1:18	Classic Metal Creations	Die-cast model of the silver 1965 Aston Martin DB5 in silver. This model includes full wire wheels and doors that open with fully detailed passenger compartment. In 1:18 scale, this model measures approximately 10 inches/20 cm long.	9042	65.96	124.44	Classic Cars
+S18_1749	1917 Grand Touring Sedan	1:18	Welly Diecast Productions	This 1:18 scale replica of the 1917 Grand Touring car has all the features you would expect from museum quality reproductions: all four doors and bi-fold hood opening, detailed engine and instrument panel, chrome-look trim, and tufted upholstery, all top...	2724	86.7	170	Vintage Cars
+S18_1889	1948 Porsche 356-A Roadster	1:18	Gearbox Collectibles	This precision die-cast replica features opening doors, superb detail and craftsmanship, working steering system, opening forward compartment, opening rear trunk with removable spare, 4 wheel independent spring suspension as well as factory baked enamel ...	8826	53.9	77	Classic Cars
+S18_1984	1995 Honda Civic	1:18	Min Lin Diecast	This model features, opening hood, opening doors, detailed engine, rear spoiler, opening trunk, working steering, tinted windows, baked enamel finish. Color yellow.	9772	93.89	142.25	Classic Cars
+S18_2238	1998 Chrysler Plymouth Prowler	1:18	Gearbox Collectibles	Turnable front wheels; steering function; detailed interior; detailed engine; opening hood; opening trunk; opening doors; and detailed chassis.	4724	101.51	163.73	Classic Cars
+S18_2248	1911 Ford Town Car	1:18	Motor City Art Classics	Features opening hood, opening doors, opening trunk, wide white wall tires, front door arm rests, working steering system.	540	33.3	60.54	Vintage Cars
+S18_2325	1932 Model A Ford J-Coupe	1:18	Autoart Studio Design	This model features grille-mounted chrome horn, lift-up louvered hood, fold-down rumble seat, working steering system, chrome-covered spare, opening doors, detailed and wired engine	9354	58.48	127.13	Vintage Cars
+S18_2795	1928 Mercedes-Benz SSK	1:18	Gearbox Collectibles	This 1:18 replica features grille-mounted chrome horn, lift-up louvered hood, fold-down rumble seat, working steering system, chrome-covered spare, opening doors, detailed and wired engine. Color black.	548	72.56	168.75	Vintage Cars
+S18_2870	1999 Indy 500 Monte Carlo SS	1:18	Red Start Diecast	Features include opening and closing doors. Color: Red	8164	56.76	132	Classic Cars
+S18_2949	1913 Ford Model T Speedster	1:18	Carousel DieCast Legends	This 250 part reproduction includes moving handbrakes, clutch, throttle and foot pedals, squeezable horn, detailed wired engine, removable water, gas, and oil cans, pivoting monocle windshield, all topped with a baked enamel red finish. Each replica come...	4189	60.78	101.31	Vintage Cars
+S18_2957	1934 Ford V8 Coupe	1:18	Min Lin Diecast	Chrome Trim, Chrome Grille, Opening Hood, Opening Doors, Opening Trunk, Detailed Engine, Working Steering System	5649	34.35	62.46	Vintage Cars
+S18_3136	18th Century Vintage Horse Carriage	1:18	Red Start Diecast	Hand crafted diecast-like metal horse carriage is re-created in about 1:18 scale of antique horse carriage. This antique style metal Stagecoach is all hand-assembled with many different parts. This collectible metal horse carriage is painted in classic R...	5992	60.74	104.72	Vintage Cars
+S18_3140	1903 Ford Model A	1:18	Unimax Art Galleries	Features opening trunk,  working steering system	3913	68.3	136.59	Vintage Cars
+S18_3232	1992 Ferrari 360 Spider red	1:18	Unimax Art Galleries	his replica features opening doors, superb detail and craftsmanship, working steering system, opening forward compartment, opening rear trunk with removable spare, 4 wheel independent spring suspension as well as factory baked enamel finish.	8347	77.9	169.34	Classic Cars
+S18_3233	1985 Toyota Supra	1:18	Highway 66 Mini Classics	This model features soft rubber tires, working steering, rubber mud guards, authentic Ford logos, detailed undercarriage, opening doors and hood, removable split rear gate, full size spare mounted in bed, detailed interior with opening glove box	7733	57.01	107.57	Classic Cars
+S18_3278	1969 Dodge Super Bee	1:18	Min Lin Diecast	This replica features opening doors, superb detail and craftsmanship, working steering system, opening forward compartment, opening rear trunk with removable spare, 4 wheel independent spring suspension as well as factory baked enamel finish.	1917	49.05	80.41	Classic Cars
+S18_3320	1917 Maxwell Touring Car	1:18	Exoto Designs	Features Gold Trim, Full Size Spare Tire, Chrome Trim, Chrome Grille, Opening Hood, Opening Doors, Opening Trunk, Detailed Engine, Working Steering System	7913	57.54	99.21	Vintage Cars
+S18_3482	1976 Ford Gran Torino	1:18	Gearbox Collectibles	Highly detailed 1976 Ford 'Gran Torino' Starsky and Hutch diecast model. Very well constructed and painted in red and white patterns.	9127	73.49	146.99	Classic Cars
+S18_3685	1948 Porsche Type 356 Roadster	1:18	Gearbox Collectibles	This model features working front and rear suspension on accurately replicated and actuating shock absorbers as well as opening engine cover, rear stabilizer flap, and 4 opening doors.	8990	62.16	141.28	Classic Cars
+S18_3856	1941 Chevrolet Special Deluxe Cabriolet	1:18	Exoto Designs	Features opening hood, opening doors, opening trunk, wide white wall tires, front door arm rests, working steering system, leather upholstery. Color black.	2378	64.58	105.87	Vintage Cars
+S18_4027	1970 Triumph Spitfire	1:18	Min Lin Diecast	Features include opening and closing doors. Color: White.	5545	91.92	143.62	Classic Cars
+S18_4409	1932 Alfa Romeo 8C2300 Spider Sport	1:18	Exoto Designs	This 1:18 scale precision die cast replica features the 6 front headlights of the original, plus a detailed version of the 142 horsepower straight 8 engine, dual spares and their famous comprehensive dashboard. Color black.	6553	43.26	92.03	Vintage Cars
+S18_4522	1904 Buick Runabout	1:18	Exoto Designs	Features opening trunk,  working steering system	8290	52.66	87.77	Vintage Cars
+S18_4668	1939 Cadillac Limousine	1:18	Studio M Art Models	Features completely detailed interior including Velvet flocked drapes,deluxe wood grain floor, and a wood grain casket with seperate chrome handles	6645	23.14	50.31	Vintage Cars
+S18_4721	1957 Corvette Convertible	1:18	Classic Metal Creations	1957 die cast Corvette Convertible in Roman Red with white sides and whitewall tires. 1:18 scale quality die-cast with detailed engine and underbvody. Now you can own The Classic Corvette.	1249	69.93	148.8	Classic Cars
+S18_4933	1957 Ford Thunderbird	1:18	Studio M Art Models	This 1:18 scale precision die-cast replica, with its optional porthole hardtop and factory baked-enamel Thunderbird Bronze finish, is a 100% accurate rendition of this American classic.	3209	34.21	71.27	Classic Cars
+S24_1046	1970 Chevy Chevelle SS 454	1:24	Unimax Art Galleries	This model features rotating wheels, working streering system and opening doors. All parts are particularly delicate due to their precise scale and require special care and attention. It should not be picked up by the doors, roof, hood or trunk.	1005	49.24	73.49	Classic Cars
+S24_1444	1970 Dodge Coronet	1:24	Highway 66 Mini Classics	1:24 scale die-cast about 18 inches long doors open, hood opens and rubber wheels	4074	32.37	57.8	Classic Cars
+S24_1628	1966 Shelby Cobra 427 S/C	1:24	Carousel DieCast Legends	This diecast model of the 1966 Shelby Cobra 427 S/C includes many authentic details and operating parts. The 1:24 scale model of this iconic lighweight sports car from the 1960s comes in silver and it's own display case.	8197	29.18	50.31	Classic Cars
+S24_1937	1939 Chevrolet Deluxe Coupe	1:24	Motor City Art Classics	This 1:24 scale die-cast replica of the 1939 Chevrolet Deluxe Coupe has the same classy look as the original. Features opening trunk, hood and doors and a showroom quality baked enamel finish.	7332	22.57	33.19	Vintage Cars
+S24_2022	1938 Cadillac V-16 Presidential Limousine	1:24	Classic Metal Creations	This 1:24 scale precision die cast replica of the 1938 Cadillac V-16 Presidential Limousine has all the details of the original, from the flags on the front to an opening back seat compartment complete with telephone and rifle. Features factory baked-ena...	2847	20.61	44.8	Vintage Cars
+S24_2766	1949 Jaguar XK 120	1:24	Classic Metal Creations	Precision-engineered from original Jaguar specification in perfect scale ratio. Features opening doors, superb detail and craftsmanship, working steering system, opening forward compartment, opening rear trunk with removable spare, 4 wheel independent sp...	2350	47.25	90.87	Classic Cars
+S24_2840	1958 Chevy Corvette Limited Edition	1:24	Carousel DieCast Legends	The operating parts of this 1958 Chevy Corvette Limited Edition are particularly delicate due to their precise scale and require special care and attention. Features rotating wheels, working streering, opening doors and trunk. Color dark green.	2542	15.91	35.36	Classic Cars
+S24_2887	1952 Citroen-15CV	1:24	Exoto Designs	Precision crafted hand-assembled 1:18 scale reproduction of the 1952 15CV, with its independent spring suspension, working steering system, opening doors and hood, detailed engine and instrument panel, all topped of with a factory fresh baked enamel fini...	1452	72.82	117.44	Classic Cars
+S24_2972	1982 Lamborghini Diablo	1:24	Second Gear Diecast	This replica features opening doors, superb detail and craftsmanship, working steering system, opening forward compartment, opening rear trunk with removable spare, 4 wheel independent spring suspension as well as factory baked enamel finish.	7723	16.24	37.76	Classic Cars
+S24_3151	1912 Ford Model T Delivery Wagon	1:24	Min Lin Diecast	This model features chrome trim and grille, opening hood, opening doors, opening trunk, detailed engine, working steering system. Color white.	9173	46.91	88.51	Vintage Cars
+S24_3191	1969 Chevrolet Camaro Z28	1:24	Exoto Designs	1969 Z/28 Chevy Camaro 1:24 scale replica. The operating parts of this limited edition 1:24 scale diecast model car 1969 Chevy Camaro Z28- hood, trunk, wheels, streering, suspension and doors- are particularly delicate due to their precise scale and requ...	4695	50.51	85.61	Classic Cars
+S24_3371	1971 Alpine Renault 1600s	1:24	Welly Diecast Productions	This 1971 Alpine Renault 1600s replica Features opening doors, superb detail and craftsmanship, working steering system, opening forward compartment, opening rear trunk with removable spare, 4 wheel independent spring suspension as well as factory baked ...	7995	38.58	61.23	Classic Cars
+S24_3420	1937 Horch 930V Limousine	1:24	Autoart Studio Design	Features opening hood, opening doors, opening trunk, wide white wall tires, front door arm rests, working steering system	2902	26.3	65.75	Vintage Cars
+S24_3432	2002 Chevy Corvette	1:24	Gearbox Collectibles	The operating parts of this limited edition Diecast 2002 Chevy Corvette 50th Anniversary Pace car Limited Edition are particularly delicate due to their precise scale and require special care and attention. Features rotating wheels, poseable streering, o...	9446	62.11	107.08	Classic Cars
+S24_3816	1940 Ford Delivery Sedan	1:24	Carousel DieCast Legends	Chrome Trim, Chrome Grille, Opening Hood, Opening Doors, Opening Trunk, Detailed Engine, Working Steering System. Color black.	6621	48.64	83.86	Vintage Cars
+S24_3856	1956 Porsche 356A Coupe	1:18	Classic Metal Creations	Features include: Turnable front wheels; steering function; detailed interior; detailed engine; opening hood; opening trunk; opening doors; and detailed chassis.	6600	98.3	140.43	Classic Cars
+S24_3969	1936 Mercedes Benz 500k Roadster	1:24	Red Start Diecast	This model features grille-mounted chrome horn, lift-up louvered hood, fold-down rumble seat, working steering system and rubber wheels. Color black.	2081	21.75	41.03	Vintage Cars
+S24_4048	1992 Porsche Cayenne Turbo Silver	1:24	Exoto Designs	This replica features opening doors, superb detail and craftsmanship, working steering system, opening forward compartment, opening rear trunk with removable spare, 4 wheel independent spring suspension as well as factory baked enamel finish.	6582	69.78	118.28	Classic Cars
+S24_4258	1936 Chrysler Airflow	1:24	Second Gear Diecast	Features opening trunk,  working steering system. Color dark green.	4710	57.46	97.39	Vintage Cars
+S24_4620	1961 Chevrolet Impala	1:18	Classic Metal Creations	This 1:18 scale precision die-cast reproduction of the 1961 Chevrolet Impala has all the features-doors, hood and trunk that open; detailed 409 cubic-inch engine; chrome dashboard and stick shift, two-tone interior; working steering system; all topped of...	7869	32.33	80.84	Classic Cars
+S32_4289	1928 Ford Phaeton Deluxe	1:32	Highway 66 Mini Classics	This model features grille-mounted chrome horn, lift-up louvered hood, fold-down rumble seat, working steering system	136	33.02	68.79	Vintage Cars
+S50_1341	1930 Buick Marquette Phaeton	1:50	Studio M Art Models	Features opening trunk,  working steering system	7062	27.06	43.64	Vintage Cars
+S700_2824	1982 Camaro Z28	1:18	Carousel DieCast Legends	Features include opening and closing doors. Color: White. 
+ Measures approximately 9 1/2 inches Long.	6934	46.53	101.15	Classic Cars
+
+5.Report total payments for October 28, 2004.	
+SELECT sum(amount) from payments WHERE paymentDate='2004-10-28'		
+47411.33
+
+6.Report those payments greater than \$100,000.
+SELECT * from payments WHERE amount>'100000'
+
+AE215433	2005-03-05 00:00:00	101244.59	124
+ID10962	2004-12-31 00:00:00	116208.4	141
+JE105477	2005-03-18 00:00:00	120166.58	141
+KI131716	2003-08-15 00:00:00	111654.4	124
+KM172879	2003-12-26 00:00:00	105743	148
+
+7.List the products in each product line.
+SELECT * FROM products ORDER BY productLine ASC
+
+8.How many products in each product line?
+SELECT COUNT(CASE WHEN productLine="Motorcycles" THEN 1 END) AS motorcycles,
+COUNT(CASE WHEN productLine="Classic Cars" THEN 1 END) AS classic_cars,
+COUNT(CASE WHEN productLine="Trucks and Buses" THEN 1 END) AS trucks_and_buses,
+COUNT(CASE WHEN productLine="Vintage Cars" THEN 1 END) AS vintage_cars,
+COUNT(CASE WHEN productLine="Planes" THEN 1 END) AS planes,
+COUNT(CASE WHEN productLine="Trains" THEN 1 END) AS trains,
+COUNT(CASE WHEN productLine="Ships" THEN 1 END) AS SHIPS
+FROM products
+
+13	38	11	24	12	3	9	
+	
+9.What is the minimum payment received?						
+SELECT MIN(buyPrice) FROM products	
+
+10.List all payments greater than twice the average payment.
+SELECT amount
+FROM payments
+WHERE amount > 2 * (SELECT AVG(amount) FROM payments)
+
+11.
+
+12.How many distinct products does ClassicModels sell?
+SELECT DISTINCT COUNT(*) FROM products
+
+13.Report the name and city of customers who don't have sales representatives?
+SELECT customerName, city FROM customers WHERE salesRepEmployeeNumber IS NULL
+
+14.What are the names of executives with VP or Manager in their title? Use the CONCAT function to combine the employee's first name and last name into a single field for reporting.
+SELECT CONCAT(firstName," ", lastName) AS VP_or_Manager FROM employees WHERE jobTitle LIKE "%VP%" OR jobTitle LIKE "%Manager%"
+
+
+16.
+SELECT COUNT(amount) FROM payments WHERE paymentDate<"2004-10-28"
+17.
+SELECT COUNT(DISTINCT customerNumber) FROM payments WHERE paymentDate<"2004-10-28"
+18.
+SELECT * FROM customers WHERE customerNumber in ( 
+SELECT DISTINCT customerNumber FROM payments WHERE paymentDate<"2004-10-28"
+);
+19.
+SELECT * FROM customers WHERE customerNumber in (SELECT * FROM payments WHERE paymentDate BETWEEN "2003-04-01" AND "2004-03-31");
+
+20.
+SELECT customerNumber, count(*) as totalPayments FROM payments WHERE paymentDate<"2004-10-28" group by customerNumber;
+
+21.FIND THE TOTAL AMOUNT PAID BY EACH CUSTOMER PAYMENT BEFORE OCTOBER 28 2004
+SELECT customerNumber, sum(amount) as totalAmount FROM payments WHERE paymentDate<"2004-10-28" group by customerNumber;
+
+22.
+SELECT productCode, SUM(quantityOrdered) AS totalNumber, MIN(quantityOrdered) AS minimunOrder, MAX(quantityOrdered) AS maximunOrder, AVG(quantityOrdered) AS averageOrder FROM orderDetails GROUP BY productCode
+
+23.
+SELECT customerNumber, SUM(amount) AS totalPayment FROM payments WHERE paymentDate BETWEEN "2004-01-01" AND "2004-12-31" GROUP BY customerNumber ORDER BY totalPayment DESC LIMIT 10;
+OFFSET 5 - SKIP THE FIRST 5
+
+24.
+SELECT customerName, UCASE(CONCAT(contactFirstName," ", contactLastName))
+AS contactName, 
+phone
+FROM customers 
+WHERE country="USA"
+ORDER BY customerName;
+
+25.
+SELECT customerNumber, 
+customerName, 
+LCASE(SUBSTRING(country, 1,3)) as countryCode 
+FROM customers 
+ORDER BY customerName LIMIT 10;
+
+26.
+SELECT productCode, 
+productName, 
+ROUND(MSRP, 2) AS salesPrice 
+FROM products 
+WHERE productLine="Motorcycles" 
+ORDER BY salesPrice DESC 
+LIMIT 5
+
+27.
+SELECT productCode, 
+productName, 
+ROUND(MSRP) AS salesPrice 
+FROM products 
+WHERE productLine="Motorcycles" 
+ORDER BY salesPrice DESC 
+LIMIT 5
+
+28.
+SELECT productCode, 
+productName, 
+buyPrice, 
+msrp, 
+ROUND(((msrp - buyPrice)*100/buyPrice), 2) AS profitMarginPorcentage
+FROM products 
+ORDER BY profitMarginPorcentage DESC
+LIMIT 10
