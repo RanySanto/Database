@@ -201,3 +201,34 @@ ROUND(((msrp - buyPrice)*100/buyPrice), 2) AS profitMarginPorcentage
 FROM products 
 ORDER BY profitMarginPorcentage DESC
 LIMIT 10
+
+29.List the largest single payment done by every customer in the year 2004, ordered by transaction value(highest to lowest)
+SELECT customerNumber, 
+MAX(amount) as largestSinglePayment 
+FROM payments 
+WHERE YEAR(paymentDate)=2004
+GROUP BY customerNumber
+ORDER BY largestSinglePayment DESC
+
+30.Show the total payments received month to month for every year
+SELECT 
+MONTH(paymentDate) as monthPayment, 
+YEAR(paymentDate) as yearPayment,
+SUM(amount)
+FROM payments GROUP BY yearPayment, monthPayment
+
+--JOIN/INNER JOIN
+31.
+SELECT checkNumber, paymentDate, amount, customers.customerNumber, customerName, phone
+	FROM payments JOIN customers 
+	ON payments.customerNumber=customers.customerNumber
+    ORDER BY paymentDate LIMIT 10;
+
+32.show the full office address and phone number for each employee
+SELECT 
+employeeNumber, CONCAT(addressLine1,', ', addressLine2) AS fullAddress, phone, employees.officeCode 
+FROM offices JOIN employees 
+ON offices.officeCode=employees.officeCode ORDER BY employeeNumber
+
+33.
+SELECT * FROM orders JOIN orderDetails ON orders.orderNumber=orderDetails.orderNumber WHERE orders.orderNumber=10100
