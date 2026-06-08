@@ -232,3 +232,7 @@ ON offices.officeCode=employees.officeCode ORDER BY employeeNumber
 
 33.
 SELECT * FROM orders JOIN orderDetails ON orders.orderNumber=orderDetails.orderNumber WHERE orders.orderNumber=10100
+
+easy challenges
+Query all columns for all American cities in the CITY table with populations larger than 100000. The CountryCode for America is USA.
+SELECT * FROM CITY WHERE POPULATION >100000 AND COUNTRYCODE ='USA';
